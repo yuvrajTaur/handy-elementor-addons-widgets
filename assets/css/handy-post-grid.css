@@ -2,7 +2,7 @@
 .handy-post-card {
     display: flex;
     flex-direction: column;
-    /* border-radius: 8px; */
+    border-radius: 8px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     overflow: hidden;
     background-color: #fff;
@@ -14,10 +14,10 @@
     width: 100%;
     background-size: cover;
     background-position: center center;
+    border-radius: 10px;
     transition: all 0.3s ease;
     overflow: hidden;
 }
-
 
 /* Default fallback height if Elementor height control not set */
 .handy-post-image:not([style*="height"]) {
@@ -212,7 +212,7 @@
 /* Grid Layout Container */
 .handy-post-grid {
     display: grid;
-    gap: 1px; 
+    gap: 20px; 
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Default fallback grid layout */
 }
 
