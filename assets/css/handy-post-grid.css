@@ -1,0 +1,242 @@
+/* General Styles for Handy Post Card */
+.handy-post-card {
+    display: flex;
+    flex-direction: column;
+    /* border-radius: 8px; */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    background-color: #fff;
+    transition: all 0.3s ease;
+}
+
+/* Image Section */
+.handy-post-image {
+    width: 100%;
+    background-size: cover;
+    background-position: center center;
+    transition: all 0.3s ease;
+    overflow: hidden;
+}
+
+
+/* Default fallback height if Elementor height control not set */
+.handy-post-image:not([style*="height"]) {
+    height: 200px;
+}
+
+/* Content Section */
+.handy-post-content {
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+/* Post Title */
+.handy-post-title {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #333;
+    transition: color 0.3s ease;
+}
+
+.handy-post-title a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Excerpt */
+.handy-post-excerpt {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+/* Meta Section */
+.handy-post-meta {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    font-size: 0.9rem;
+    color: #888;
+    margin-top: 15px;
+}
+
+.handy-post-meta span {
+    margin-right: 5px;
+}
+
+/* Avatar Style */
+.handy-post-avatar {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 10px;
+    display: inline-block;
+}
+
+.handy-post-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Read More Button */
+.handy-read-more-btn {
+    display: inline-block;
+    background-color: #0073e6;
+    color: #fff;
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 0.9rem;
+    margin-top: 15px;
+    transition: background-color 0.3s ease;
+}
+
+.handy-read-more-btn:hover {
+    background-color: #005bb5;
+}
+
+/* Responsive Styles for Handy Post Grid */
+@media (max-width: 1024px) {
+    .handy-post-grid {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Default fallback for medium devices */
+    }
+}
+
+@media (max-width: 768px) {
+    .handy-post-card {
+        flex-direction: column;
+    }
+
+    .handy-post-title {
+        font-size: 1.5rem;
+    }
+
+    .handy-post-excerpt {
+        font-size: 0.95rem;
+    }
+
+    .handy-post-meta {
+        flex-direction: column;
+        align-items: flex-start;
+        font-size: 0.85rem;
+    }
+
+    .handy-post-meta span {
+        margin-right: 0;
+        margin-bottom: 5px;
+    }
+
+    .handy-post-avatar {
+        margin-bottom: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .handy-post-title {
+        font-size: 1.3rem;
+    }
+
+    .handy-post-excerpt {
+        font-size: 0.9rem;
+    }
+
+    .handy-post-avatar {
+        width: 25px;
+        height: 25px;
+    }
+
+    .handy-read-more-btn {
+        padding: 8px 12px;
+        font-size: 0.85rem;
+    }
+}
+
+/* Meta Position - Entry Header or Footer */
+.meta-entry-header {
+    order: -1; /* Moves the meta to the top */
+    margin-bottom: 15px;
+}
+
+.meta-entry-footer {
+    order: 1; /* Keeps the meta at the bottom */
+}
+
+/* Avatar Visibility Based on Settings */
+.handy-post-avatar {
+    display: none; /* Default to hidden */
+}
+
+.handy-post-avatar.show-avatar {
+    display: inline-block;
+}
+
+/* Author Name Visibility Based on Settings */
+.handy-post-author {
+    display: none; /* Default to hidden */
+}
+
+.handy-post-author.show-author {
+    display: inline-block;
+}
+
+/* Grid Column Classes - Adjust for the number of columns */
+.handys-class-handy-col-1 .handy-post-card {
+    flex: 0 0 100%;
+}
+
+.handys-class-handy-col-2 .handy-post-card {
+    flex: 0 0 50%;
+}
+
+.handys-class-handy-col-3 .handy-post-card {
+    flex: 0 0 33.33%;
+}
+
+.handys-class-handy-col-4 .handy-post-card {
+    flex: 0 0 25%;
+}
+
+.handys-class-handy-col-5 .handy-post-card {
+    flex: 0 0 20%;
+}
+
+.handys-class-handy-col-6 .handy-post-card {
+    flex: 0 0 16.66%;
+}
+
+/* Grid Layout Container */
+.handy-post-grid {
+    display: grid;
+    gap: 1px; 
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Default fallback grid layout */
+}
+
+/* Override for specific column classes */
+.handys-class-handy-col-1 .handy-post-grid {
+    grid-template-columns: repeat(1, 1fr);
+}
+
+.handys-class-handy-col-2 .handy-post-grid {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.handys-class-handy-col-3 .handy-post-grid {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.handys-class-handy-col-4 .handy-post-grid {
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.handys-class-handy-col-5 .handy-post-grid {
+    grid-template-columns: repeat(5, 1fr);
+}
+
+.handys-class-handy-col-6 .handy-post-grid {
+    grid-template-columns: repeat(6, 1fr);
+}
