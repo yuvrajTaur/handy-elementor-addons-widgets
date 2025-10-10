@@ -124,6 +124,7 @@ define('HANDY_URL', plugin_dir_url(HANDY_FILE));
 
          require HANDY_DIR . 'includes/handy-elementor-register.php';
          require HANDY_DIR . 'templates/handy-post-grid.php';
+         require HANDY_DIR . 'includes/handy-helper-class.php';
 
         }
 
